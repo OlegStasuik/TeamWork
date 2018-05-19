@@ -4,7 +4,11 @@ int main (void){
 
 printf("Hello world!\n");
 
-getchar()
+printf(«The second commit»);
+
+printf(«3 Commit»);
+
+getchar();
 
 return 0;
 
