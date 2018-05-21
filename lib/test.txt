@@ -1,5 +1,6 @@
 //Author: Oleg Stasiuk(stasoleg101299@gmail.com)
 #include <stdio.h>
+#include «Greeter.txt»
 
 int main (void){
 
