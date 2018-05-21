@@ -1,0 +1,48 @@
+//
+//  main.c
+//  Lab_2
+//
+//  Created by Oleg Stasuik on 09.04.18.
+//  Copyright © 2018 Oleg Stasuik. All rights reserved.
+//
+
+#include <stdio.h>
+
+#define NUNBERS 15
+#define SIZESENTENSE 10
+
+void changeNumber(int, char*);
+
+int main(int argc, const char * argv[]) {
+    int numbers[NUNBERS];
+    char sentense[SIZESENTENSE];
+    int i;
+    
+    printf("Enter your number:\n");
+    for (i = 0; i < NUNBERS; ++i){
+        scanf("%d", numbers+i);
+        if (numbers[i] == 0)
+            break;
+    }
+    
+    for (int u = 0; u < i; ++u){
+        changeNumber(numbers[u], sentense);
+        printf("Your number: %s\n", sentense);
+    }
+    
+    return 0;
+}
+void changeNumber(int number, char *result){
+    int i = 0;
+    int temp = number;
+    
+    while (temp / 3){
+        ++i;
+        temp /= 3;
+    }
+    while (number / 3){
+        result[i--] = (char)number%3 + '0';
+        number /= 3;
+    }
+    result[0] = (char)number + '0';
+}
